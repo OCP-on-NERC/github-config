@@ -1,0 +1,13 @@
+name,description,privacy
+instructlab-admins,experiment with instructlab on OAI,closed
+kruize-admins,,closed
+nerc-ai4cloudops,,closed
+nerc-curator,,closed
+nerc-docs,Documentation maintainers,closed
+nerc-infra-people,People who can authenticate to nerc-ocp-infra,closed
+nerc-logs-metrics,Access to metrics and logs on the nerc-infra cluster,closed
+nerc-obs-admins,Admin users for the observability cluster,closed
+nerc-ops,NERC system operators,closed
+nerc-prod-people,People who can authenticate to nerc-ocp-prod,closed
+nerc-rhods,,closed
+nerc-test-people,People who can authenticate to nerc-ocp-test,closed
