@@ -69,3 +69,15 @@ module "repo_gatekeeper" {
     }
   ]
 }
+
+module "repo_nerc_snmp_exporter_config" {
+  source      = "./modules/common_repository"
+  name        = "nerc-snmp-exporter-config"
+  description = "Configuration for snmp-exporter"
+  teams = [
+    {
+      team_id    = "nerc-ops"
+      permission = "push"
+    }
+  ]
+}
