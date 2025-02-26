@@ -1,15 +1,16 @@
 resource "github_repository" "repo" {
-  name             = var.name
-  visibility       = var.visibility
-  description      = var.description
-  homepage_url     = var.homepage_url
-  auto_init        = true
-  allow_auto_merge = var.visibility == "private" ? false : true
-  has_issues       = true
-  has_downloads    = false
-  has_projects     = false
-  has_wiki         = false
-  is_template      = var.is_template
+  name                 = var.name
+  visibility           = var.visibility
+  description          = var.description
+  homepage_url         = var.homepage_url
+  auto_init            = true
+  allow_auto_merge     = var.visibility == "private" ? false : true
+  has_issues           = true
+  has_downloads        = false
+  has_projects         = false
+  has_wiki             = false
+  is_template          = var.is_template
+  vulnerability_alerts = false
 }
 
 resource "github_issue_label" "repo_labels" {

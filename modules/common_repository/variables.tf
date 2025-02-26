@@ -88,3 +88,9 @@ variable "homepage_url" {
   type        = string
   default     = null
 }
+
+variable "vulnerability_alerts" {
+  description = "Enable dependabot vulnerability alerts"
+  type        = bool
+  default     = false
+}
