@@ -5,6 +5,12 @@ module "repo_github_config" {
   required_status_checks = [
     "pre-commit",
   ]
+  teams = [
+    {
+      team_id    = "nerc-ops"
+      permission = "push"
+    }
+  ]
 }
 
 module "repo_openshift_tests" {
