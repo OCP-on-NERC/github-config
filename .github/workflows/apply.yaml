@@ -1,0 +1,41 @@
+name: Apply configuration
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "17 */4 * * *"
+  push:
+    paths:
+      - "**/*.tf"
+      - "**/*.csv"
+    branches:
+      - main
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      TF_CLI_ARGS: "-no-color"
+      TF_IN_AUTOMATION: "true"
+    steps:
+    - uses: opentofu/setup-opentofu@v1
+      with:
+        tofu_wrapper: false
+
+    - uses: actions/checkout@v4
+
+    - run: ./ci/run-tofu-cmd.sh init
+
+    - name: Generate a token
+      id: generate-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ vars.CONFIG_APP_ID }}
+        private-key: ${{ secrets.CONFIG_APP_SECRET }}
+        owner: ${{ github.repository_owner }}
+
+    - run: ./ci/run-tofu-cmd.sh apply -concise -auto-approve
+      env:
+        GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
