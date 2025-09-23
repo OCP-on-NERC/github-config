@@ -13,3 +13,4 @@ nerc-ops,NERC system operators,closed
 nerc-prod-people,People who can authenticate to nerc-ocp-prod,closed
 nerc-rhods,,closed
 nerc-test-people,People who can authenticate to nerc-ocp-test,closed
+nerc-test-perses,nerc-ocp-test cluster users who can create Perses resources,closed
