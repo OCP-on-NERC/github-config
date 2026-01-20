@@ -26,6 +26,7 @@ When a commit is pushed to the `main` branch (e.g., when a pull request merges),
 
 1. Open `team-members/<team>.csv`
 1. Add a new line of the form `<username>,<role>`, where `<role>` should be `member`.
+1. Note: Please submit adding a new team and adding team members as two separate PRs. First, submit a PR to add the new team. Once that PR is merged, submit a second PR to add team members. Combining them in a single PR may cause the github job to fail due to ordering/dependency issues.
 
 ### Add a new repository?
 

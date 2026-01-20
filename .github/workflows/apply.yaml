@@ -24,7 +24,7 @@ jobs:
       with:
         tofu_wrapper: false
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - run: ./ci/run-tofu-cmd.sh init
 
