@@ -5,6 +5,7 @@ module "repo_github_config" {
   required_status_checks = [
     "pre-commit",
   ]
+  required_approvals = 1
   teams = [
     {
       team_id    = "nerc-ops"
