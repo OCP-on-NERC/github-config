@@ -16,3 +16,4 @@ nerc-test-people,People who can authenticate to nerc-ocp-test,closed
 nerc-test-perses,nerc-ocp-test cluster users who can create Perses resources,closed
 redhat-support,red hat support team with temporary access to edu cluster,closed
 nairr250426,Allow Efficient memory offloading project access to barcelona for RDMA,closed
+nairr250245,Allow Efficient Time Series project access to barcelona for RDMA,closed
