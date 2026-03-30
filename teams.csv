@@ -17,3 +17,4 @@ nerc-test-perses,nerc-ocp-test cluster users who can create Perses resources,clo
 redhat-support,red hat support team with temporary access to edu cluster,closed
 nairr250426,Allow Efficient memory offloading project access to barcelona for RDMA,closed
 nairr250245,Allow Efficient Time Series project access to barcelona for RDMA,closed
+nerc-test-cost-management,Testing RH Cost Management Onprem in the nerc-ocp-test cluster,closed
