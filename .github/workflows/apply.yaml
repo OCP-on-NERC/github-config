@@ -20,7 +20,7 @@ jobs:
       TF_CLI_ARGS: "-no-color"
       TF_IN_AUTOMATION: "true"
     steps:
-    - uses: opentofu/setup-opentofu@v1
+    - uses: opentofu/setup-opentofu@v2
       with:
         tofu_wrapper: false
 
@@ -30,7 +30,7 @@ jobs:
 
     - name: Generate a token
       id: generate-token
-      uses: actions/create-github-app-token@v2
+      uses: actions/create-github-app-token@v3
       with:
         app-id: ${{ vars.CONFIG_APP_ID }}
         private-key: ${{ secrets.CONFIG_APP_SECRET }}
